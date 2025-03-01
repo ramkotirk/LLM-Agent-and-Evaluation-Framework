@@ -1,10 +1,8 @@
-# HackSynth: LLM Agent and Evaluation Framework for Autonomous Penetration Testing
+LLM Agent and Evaluation Framework for Autonomous Penetration Testing
 The paper can be found on [arXiv](https://arxiv.org/abs/2412.01778).
 
 ## Introduction
-<img align="left" style="width: 160px;" src="assets/logo.gif" alt="HackSynth Logo"/>
-
-We introduce HackSynth, a novel Large Language Model (LLM)-based agent capable of autonomous penetration testing.
+We introduce a novel Large Language Model (LLM)-based agent capable of autonomous penetration testing.
 HackSynth's dual-module architecture includes a Planner and a Summarizer, which enable it to generate commands and process feedback iteratively. 
 To benchmark HackSynth, we propose two new Capture The Flag (CTF)-based benchmark sets utilizing the popular platforms PicoCTF and OverTheWire. 
 These benchmarks include two hundred challenges across diverse domains and difficulties, providing a standardized framework for evaluating LLM-based penetration testing agents.
@@ -42,11 +40,3 @@ If you use this code in your work or research, please cite the corresponding pap
       primaryClass={cs.CR},
       url={https://arxiv.org/abs/2412.01778}, 
 }
-```
-## Contributors
-- Lajos Muzsai (muzsailajos@protonmail.com)
-- David Imolai (david@imol.ai)
-- András Lukács (andras.lukacs@ttk.elte.hu)
-
-## License
-The project uses the GNU AGPLv3 license.
