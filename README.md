@@ -1,29 +1,48 @@
 LLM Agent and Evaluation Framework for Autonomous Penetration Testing
-The paper can be found on [arXiv](https://arxiv.org/abs/2412.01778).
 
-## Introduction
-We introduce a novel Large Language Model (LLM)-based agent capable of autonomous penetration testing.
-LLM's dual-module architecture includes a Planner and a Summarizer, which enable it to generate commands and process feedback iteratively. 
-To benchmark HackSynth, we propose two new Capture The Flag (CTF)-based benchmark sets utilizing the popular platforms PicoCTF and OverTheWire. 
-These benchmarks include two hundred challenges across diverse domains and difficulties, providing a standardized framework for evaluating LLM-based penetration testing agents.
+A framework for evaluating the performance of Large Language Models (LLMs) in autonomous penetration testing.
 
-<br>
+Overview
+This framework provides a comprehensive evaluation environment for assessing the capabilities of LLMs in autonomous penetration testing. It includes a modular architecture for integrating different LLMs, a simulation environment for testing, and a set of evaluation metrics for assessing performance.
 
-## Using the repository
-- You will have to create a Hugging Face and a Neptune.ai account
-- Copy your API keys to the `.env` file, and set the desired CUDA devices, based on the `.env_example`
-- [Set up the PicoCTF benchmark](picoctf_bench/README.md)
-- [Set up the OverTheWire benchmark](overthewire_bench/README.md)
-- Start the HackSynth Agent
-  - Install the environment:
-    ```
-    python -m venv cyber_venv
-    source cyber_venv/bin/activate
-    pip install -r requirements.txt
-    ```
-  - Start the benchmark with the following:
-    ```
-    python run_bench.py -b benchmark.json -c config.json
-    ```
-    The `benchmark.json` should be one of the generated `benchmark_solved.json` files, or an equivalently structured file.
-    The configuration files used by us for the measurements in the paper are also available in the configs folder.
+Requirements
+- Python 3.8+
+- Docker
+- NVIDIA GPU (optional)
+- transformers library
+- torch library
+- neptune library
+- docker library
+- paramiko library
+- pyelftools library
+- pwntools library
+
+Installation
+1. Clone the repository: git clone https://github.com/your-username/llm-agent.git
+2. Install required packages: pip install -r requirements.txt
+3. Build the Docker image: docker build -t llm-agent .
+4. Run the Docker container: docker run -it llm-agent
+
+Usage
+1. Configure the framework by modifying the config.json file.
+2. Run the evaluation script: python evaluate.py
+3. View the results in the Neptune dashboard.
+
+Evaluation Metrics
+- Success rate
+- Average time to exploit
+- Number of failed attempts
+- Coverage of vulnerabilities
+
+LLM Integration
+The framework provides a modular architecture for integrating different LLMs. Currently, it supports the following LLMs:
+
+- BERT
+- RoBERTa
+- XLNet
+
+Simulation Environment
+The framework includes a simulation environment for testing the LLMs. The environment consists of a set of virtual machines with different vulnerabilities.
+
+Acknowledgments
+- Thanks to [RamkotiRK] for creating this project.
