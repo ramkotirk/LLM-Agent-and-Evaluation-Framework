@@ -3,7 +3,7 @@ The paper can be found on [arXiv](https://arxiv.org/abs/2412.01778).
 
 ## Introduction
 We introduce a novel Large Language Model (LLM)-based agent capable of autonomous penetration testing.
-HackSynth's dual-module architecture includes a Planner and a Summarizer, which enable it to generate commands and process feedback iteratively. 
+LLM's dual-module architecture includes a Planner and a Summarizer, which enable it to generate commands and process feedback iteratively. 
 To benchmark HackSynth, we propose two new Capture The Flag (CTF)-based benchmark sets utilizing the popular platforms PicoCTF and OverTheWire. 
 These benchmarks include two hundred challenges across diverse domains and difficulties, providing a standardized framework for evaluating LLM-based penetration testing agents.
 
